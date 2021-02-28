@@ -6,7 +6,7 @@ public class MyClass {
 
         System.out.println("""     
                 Hello world!\s
-                Mani sauc Gatis Ķanavonvons!\s
+                Mani sauc Gatis Ķevans!\s
                 Bye bye hehe!!""");
 
     }
