@@ -114,6 +114,7 @@ public class MyClass {
         System.out.println(lielakaLieluma);
         System.out.println(mazakaLieluma);
 
+        //Operatori
         
 
     }
