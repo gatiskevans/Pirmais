@@ -196,8 +196,156 @@ public class MyClass {
         String kopa = savieno + pievieno;
         System.out.println(kopa);
 
+        //Math funkcija - Math();
+        System.out.println(Math.max(5,10));     //Math.max - maksimālā vērtība
+        System.out.println(Math.min(5,10));     //Math.min - minimālā vērtība
+        System.out.println(Math.sqrt(25));      //Math.sqrt - Kvadrātsakne no vērtības. Attēlos ar decimālskaitli
+        System.out.println(Math.abs(-4.8));     //Math.abs - absolūtā pozitīvā skaitļa vērtība
+        System.out.println(Math.random());      //Math.random - random skaitlis no 0.0 - 1.0 (1.0 neieskaitot)
+
+        //Math.random skaitli var kontrolēt
+        int randomSkaitlis = (int)(Math.random() * 101);    //(int) vajadzīgs, jo random attēlo decimālskaitli nevis int
+        System.out.println(randomSkaitlis);                 //Attēlos skaitli no 0 līdz 100
+
+        //Boolean ir vai nu true vai false
+        int a = 4;
+        int b = 9;
+        System.out.println(a<b);    //Boolean atgriezīs vērtību true
+        System.out.println(a==4);   //Boolean atgriezīs vērtību true
+        System.out.println(10==4);  //Boolean atgriezīs vērtību false
+
+        //if - else statements
+        if(10>9){
+            System.out.println("Desmit ir lielāks par deviņi");
+        } else {System.out.println("Kaut kas nogāja greizi");}
+
+        //if else if statement
+        int laiks = 20;
+        if(laiks < 10){
+            System.out.println("Labrīt");
+        } else if(laiks < 20){
+            System.out.println("Labdien");
+        } else {System.out.println("Labvakar"); }
+
+        //Ternary operators OOP variants if else statementam
+        //mainīgais = (nosacījums) ? true rezultāts : false rezultāts;
+
+        String rezultats = (laiks < 18) ? "Labdien" : "Labvakar";
+        System.out.println(rezultats);
+
+        //Switch
+        int diena = 4;
+        switch(diena){
+
+            case 1:
+                System.out.println("Pirmdiena");    //Pirmais gadījuma
+                break;                              //break; aptur bloka turpmāku izpildi
+                //Gadījumā ja case 1 ir true, tad break ietaupīs laiku igonērot pārējos cases
+
+            case 2:
+                System.out.println("Otrdiena");     //Otrais gadījums
+                break;
+            case 3:
+                System.out.println("Trešdiena");    //Trešais gadījums
+                break;
+            case 4:
+                System.out.println("Ceturtdiena");  //Ceturtais gadījums
+                break;
+            case 5:
+                System.out.println("Piektdiena");   //Piektais gadījums
+                break;
+            case 6:
+                System.out.println("Sestdiena");    //Sestais gadījums
+                break;
+            case 7:
+                System.out.println("Svētdiena");    //Septītais gadījums
+                break;
+            default:
+                System.out.println("Kaut kas nogāja greizi");   //Ja neviens no iepriekšējiem gadījumiem nenostrādā
+
+        }
+
+        //while cikls
+        int sk = 1;
+        while(sk <= 5) {
+            System.out.println(sk);
+            sk++;
+        }
+
+        //do/while cikls vispirms izpilda koda bloku, kas atrodas do sadaļā, un tikai pēc tam pārbauda while sadaļu
+        int skaitlis = 1;
+        do{
+            System.out.println("Skaitlis ir: " + skaitlis);
+            skaitlis++;
+        } while(skaitlis <= 5);
+
+        //for cikls tiek izmantots, ja zini konkrēti cik daudz reizes vēlies izklaist ciklu
+        //for(statement1, statement2, statement3){}
+        //Statement1 tiek izpildīts vienu reizi pirms cikls sākas (i=0)
+        //Statement2 definē nosacījumus ciklam (cik daudz reizes; robeža, kur beigties utml) (i<5)
+        //Statement3 tiek izpildīts katru reizi, kad koda bloks tiek izpildīts. Parasti liek inkrementu i++
+        for(int i=1; i<=5; i++) {
+            System.out.println("For cikla vērtība: " + i);
+        }
+
+        //Attēlos tikai pāra skaitļus
+        for(int i=2; i<=10; i=i+2) {
+            System.out.println("Pāra skaitlis: " + i);
+        }
+
+        //for-each ciklu izmanto, lai veiktu ciklus masīvos
+        //for(tips mainīgāNosaukums : masīvaNosaukums) {}
+        String[] detalas = {"RAM", "HDD", "Motherboard", "PSU", "Case", "CPU", "GPU", "Monitor"};  //Šis ir masīvs
+        for(String i : detalas) {
+            System.out.println(i);          //Attālos katru ierakstu masīvā jaunā rindā
+        }
+
+        //break noder arī ne tikai switch statement, bet arī lai izbēgtu no cikliem
+        for(int i=1; i<10; i++){
+            if(i == 4){
+                break;
+            }
+            System.out.println("Break pie skaitļa 4: " + i);
+        }
+
+        //continue izlaiž vienu cikla notikumu.
+        //Ja konkrētais gadījums notiek, tad ar continue to izlaidīs un cikls turpināsies tālāk.
+        for(int i=1; i<=5; i++){
+            if(i == 3){
+                continue;
+            } System.out.println("Continue izlaidīs skaitli 3: " + i);
+        }
+
+        //Masīvi tiek izmantoti, lai turētu vairākus elementus vienā mainīgajā
+        //Masīvi sākas ar skaitli 0 un tos deklarē ar kvadrātiekavām []
+        String[] edieni = {"Saldējums", "Popkorns", "Šokolāde", "Torte", "Kartupeļi"};
+        System.out.println(edieni[0]);  //Attēlos elementu Saldējums
+
+        //Mainīs pirmo masīva elementu ar [0]
+        edieni[0] = "Karamele";
+        System.out.println(edieni[0]);
+
+        //ar parametru length var noskaidrot cik daudz elementi ir masīvā
+        System.out.println(edieni.length);  //Attēlos 5
+
+        //length ir labs veids kā ciklos norādīt cik daudz reizes iet cauri, lai attēlotu visus elementus
+        for(int i=0; i < edieni.length; i++){
+            System.out.println(edieni[i]);
+        }
+
+        //Multidimensionāls masīvs ir masīvs, kur katrā elementā ir iekšā masīvs.
+        //Divdimensionālu masīvu attēlo ar divām kvadrātiekavām [][], trīsdimensionālu ar trīs utt
+        int skaitli[][] = {{1,2,3,4},{5,6,7}};
+        System.out.println(skaitli[0][2]);  //Attēlos pirmā elementa trešo elementu
+
+        //Arī divdimensionālu masīvu var attēlot ar for ciklu
+        for(int i = 0; i < skaitli.length; i++){
+            for(int j = 0; j < skaitli[i].length; j++){
+                System.out.println("Divdimensionālais masīvs for ciklā: " + skaitli[i][j]);
+            }
+        }
+
         
 
     }
-
 }
