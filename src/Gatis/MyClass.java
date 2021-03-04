@@ -105,7 +105,7 @@ public class MyClass {
         System.out.println(mainities);
         System.out.println(jaunsTips);
 
-        //Narroiwing casting jāveic ir manuālu ieliekot iekavās data type pirms vērtības
+        //Narroiwing casting jāveic ir manuāli ieliekot iekavās data type pirms vērtības
         //Narrowing casting veic, ja vēlies konvertēt no lielāka uz mazāku data type
         //Secība - double->float->long->int->char->short->byte
         double lielakaLieluma = 12.234d;
@@ -115,6 +115,87 @@ public class MyClass {
         System.out.println(mazakaLieluma);
 
         //Operatori
+        /* Aritmētiskie operatori ir:
+            + Saskaita kopā divas vērtības (arī mainīgos)
+            - Atņem vērtību no cita
+            * Sareizina divas vērtības kopā
+            / Sadala vērtības
+            % Modulis - attēlo dalījuma atlikuma vērtību. Piemēram 7 % 2 = 1 (jo atlikums ir 1)
+            ++ Inkrements - palielina vērtību pa 1
+            -- Dekrements - samazina vērtību pa 1
+         */
+
+        /* Assignment operatori
+            = Iedod attiecīgo vērtību mainīgajam. Piemērs, x = 10
+            += Pieskaita attiecīgo vērtību mainīgajam. Piemērs, ja x=10, un pēc tam x+=5, tad x būs 15
+            -= Atņam attiecīgo vērtību mainīgajam. Piemērs, ja x=10, un x-=5, tad x būs 5
+            *= Piereizina attiecīgo vērtību mainīgajam. Piemērs, x=10, un x*=5, tad x būs 50
+            /= Sadala attiecīgo vērtību mainīgajam. Piemērs, x=10, un x/=5, tad x būs 2
+            %= Sadala un attēlo dalījuma atlikuma vērtību. Piemērs, x=10, un x%=3, tad x būs 1
+         */
+
+        /* Bitwise Assignment Operatori
+            &= Pievieno AND operāciju pie vērtības
+            |= Pievieno OR operāciju pie vērtības
+            ^= Pievieno XOR operāciju pie vērtības
+            <<= Pievieno Left Shift pie vērtības
+            >>= Pievieno Right Shift pie vērtības
+         */
+
+        /* Salīdzināšanas Operatori
+            == Vienāds ar
+            != Nav vienāds ar
+            > Lielāks par
+            < Mazāks par
+            >= Lielāks vai vienāds ar
+            <= Mazāks vai vienāds ar
+         */
+
+        /* Loģiskie Operatori
+            && Loģiskā AND funkcija. Atgriež true vērtību, ja abas puses ir patiesas
+            || Loģiskā OR funkcija. Atgriež true vērtību, ja vismaz viena puse ir patiesa
+            ! Loģiskā NOT funkcija. Apgriež vērtības pretējā virzienā. Atgriež false vērtību, ja rezultāts ir patiess
+         */
+
+        //String garumu var noteikt ar metodi length()
+        String teksts = "Šis ir string teksts ar attiecīgu garumu";
+        System.out.print("Šī teksta garums ir: " + teksts.length() + " rakstzīmes\n");
+
+        String mainigiBurti = "Šis teksts tiks izmainīts.";
+
+        System.out.println(mainigiBurti.toUpperCase());
+        System.out.println(mainigiBurti.toLowerCase());
+
+        String lokacija = "Noteiksim, cik tālu no sākuma atrodas vārds Gatis";
+        System.out.println(lokacija.indexOf("Gatis"));  //Java skaita sākot no 0. 0 ir pirmā pozīcija, 1 ir otrā utt
+
+        //Concatenation - Tas ir kad savieno divus vai vairāk String ar +
+        String mansVards = "Gatis ";
+        String mansUzvards = "Ķevans";
+        System.out.println(mansVards + mansUzvards);
+
+        //Concat() funkcija arī savieno divus String. Attiecīgi vārds concatination
+        System.out.println(mansVards.concat(mansUzvards));
+
+        //Speciālās rakstzīmes var izmantot, ja izmanto Escape character \
+        //Java uzskatīs nākamo rakstzīmi pēc \ kā daļu no string teksta nevis kā speciālo programmēšanas rakstzīmi
+        String rakstzimes = "Es varu ielikt \"Pēdiņas\" savā tekstā, neliekot programmai domāt, ka vēlos beigt string";
+        System.out.println(rakstzimes);
+
+        /* Citi Escape varianti Java valodā
+            \n Jauna rinda
+            \r Carriage Return.
+            \t Tab atkāpe
+            \b Backspace - nodzēš iepriekšējo rakstzīmi
+            \f Form Feed
+         */
+
+        //Ja ar + savieno integer un string, tad rezultāts būs concatenation un String (integer daļa pārtaps string)
+        String savieno = "20";
+        int pievieno = 10;
+        String kopa = savieno + pievieno;
+        System.out.println(kopa);
+
         
 
     }
