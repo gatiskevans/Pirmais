@@ -345,7 +345,20 @@ public class MyClass {
             }
         }
 
-        
+        manaMetode();
+        manaMetode();
+        manaMetode();
 
     }
+
+    //Method ir koda bloks, kurš izpildās tikai tad, kad metode tiek izsaukta
+    //ManaMetode() ir metodes nosaukums
+    //static nozīmē to, ka metode pieder MyClass klasei nevis MyClass objektam
+    //void nozīmē to, ka šai metodei nav return vērtība
+    static void manaMetode(){
+        System.out.println("Mana Metode");
+    }
+
+
+
 }
