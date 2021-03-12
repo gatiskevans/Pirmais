@@ -279,7 +279,7 @@ public class MyClass {
             skaitlis++;
         } while(skaitlis <= 5);
 
-        //for cikls tiek izmantots, ja zini konkrēti cik daudz reizes vēlies izklaist ciklu
+        //for cikls tiek izmantots, ja zini konkrēti cik daudz reizes vēlies izlaist ciklu
         //for(statement1, statement2, statement3){}
         //Statement1 tiek izpildīts vienu reizi pirms cikls sākas (i=0)
         //Statement2 definē nosacījumus ciklam (cik daudz reizes; robeža, kur beigties utml) (i<5)
